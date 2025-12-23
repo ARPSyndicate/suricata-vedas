@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ZyXEL XSS Attempt"; flow:established,to_server; content:"free_time_failed.cgi?err_msg="; http_uri; nocase; sid:1000299; rev:1; reference:cve,CVE-2019-12581; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-12581;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"WeGIA Path Traversal Attempt"; flow:established,to_server; uricontent:"/html/socio/sistema/download_remessa.php?file="; nocase; sid:1000003; rev:1; reference:cve,CVE-2025-55169; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-55169;)

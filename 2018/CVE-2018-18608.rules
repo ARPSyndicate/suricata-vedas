@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"DedeCMS XSS Attempt"; flow:established,to_server; uricontent:"/plus/feedback.php/rp4hu%27>"; nocase; sid:1000295; rev:1; reference:cve,CVE-2018-18608; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-18608;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"CRLF Injection Attempt"; content:"%0d%0a"; sid:1000293; rev:1; reference:cve,CVE-2021-31249; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-31249;)
