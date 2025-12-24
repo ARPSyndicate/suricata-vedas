@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Kafka UI Command Injection Attempt"; content:"Process p=new ProcessBuilder(\"sh\",\"-c\","; nocase; distance:0; sid:1000308; rev:1; reference:cve,CVE-2023-52251; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-52251;)

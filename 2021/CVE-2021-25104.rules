@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress Ocean Extra XSS Attempt"; content:"<script>alert(1)</script>"; nocase; sid:1000273; rev:1; reference:cve,CVE-2021-25104; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-25104;)

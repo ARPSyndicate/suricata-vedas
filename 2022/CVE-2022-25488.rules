@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"SQL Injection attempt in Atom CMS v2.0"; content:"-1 union select md5"; nocase; sid:1000005; rev:1; reference:cve,CVE-2022-25488; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-25488;)

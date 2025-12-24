@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"phpIPAM Authorization Bypass Attempt"; content:"GET /find_full_subnets.php"; nocase; sid:1000227; rev:1; reference:cve,CVE-2023-0678; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-0678;)

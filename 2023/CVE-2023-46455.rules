@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"GL.iNet AR300M Arbitrary File Write Attempt"; content:"POST /upload HTTP/1.1"; nocase; content:"Content-Type: multipart/form-data"; nocase; content:"X-Requested-With: XMLHttpRequest"; nocase; sid:1000326; rev:1; reference:cve,CVE-2023-46455; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-46455;)

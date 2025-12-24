@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Kaseya VSA Credential Disclosure Attempt"; content:"un="; nocase; distance:0; content:"&pw="; nocase; distance:0; sid:1000030; rev:1; reference:cve,CVE-2021-30116; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-30116;)

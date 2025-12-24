@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress Ditty XSS Attempt"; content:"tab=%22%3E%3Cimg+src+onerror%3Dalert%28document.domain%29%3E"; nocase; sid:1000039; rev:1; reference:cve,CVE-2022-0533; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-0533;)

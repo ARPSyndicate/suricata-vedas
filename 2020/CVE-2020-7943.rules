@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Puppet Server/PuppetDB Sensitive Information Disclosure"; content:"trapperkeeper"; nocase; http_header; content:"application/json"; nocase; http_header; sid:1000047; rev:1; reference:cve,CVE-2020-7943; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-7943;)

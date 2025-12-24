@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress Popup Maker Unauthenticated Info Disclosure Attempt"; content:"pum_action=tools_page_tab_system_info"; nocase; sid:1000008; rev:1; reference:cve,CVE-2019-17574; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-17574;)

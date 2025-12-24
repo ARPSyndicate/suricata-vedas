@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"PHPJabbers Food Delivery Script SQL Injection Attempt"; content:"-1910' OR 6100=6100--"; nocase; sid:1000272; rev:1; reference:cve,CVE-2023-40748; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-40748;)

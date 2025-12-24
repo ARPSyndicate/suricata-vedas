@@ -1,0 +1,1 @@
+alert TCP any any -> any any (msg:"Potential Sitecore Insecure Deserialization Attack"; content:"ThumbnailsAccessToken"; nocase; sid:1000414; rev:1; reference:cve,CVE-2025-27218; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-27218;)

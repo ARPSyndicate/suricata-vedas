@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress Download Manager XSS Attempt"; content:"<script>"; nocase; sid:1000042; rev:1; reference:cve,CVE-2022-2168; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-2168;)

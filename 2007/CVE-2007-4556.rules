@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Struts OGNL Injection Attempt"; content:"%{"; nocase; distance:0; content:"}"; nocase; distance:0; sid:1000298; rev:1; reference:cve,CVE-2007-4556; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2007-4556;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS 80 (msg:"ZKTeco BioTime Directory Traversal Attempt"; content:"GET /iclock/file?SN=att&url=/../../../../../../"; nocase; sid:1000241; rev:1; reference:cve,CVE-2023-38952; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-38952;)

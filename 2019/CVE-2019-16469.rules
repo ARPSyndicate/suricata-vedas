@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"AEM Expression Language Injection Attempt"; content:"$"; nocase; distance:0; within:50; sid:1000040; rev:1; reference:cve,CVE-2019-16469; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-16469;)

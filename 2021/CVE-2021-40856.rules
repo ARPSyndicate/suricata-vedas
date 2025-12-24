@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS 80 (msg:"Auerswald COMfortel Authentication Bypass attempt"; content:"/about/../"; nocase; sid:1000310; rev:1; reference:cve,CVE-2021-40856; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-40856;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Squirrelly RCE Attempt"; content:"defaultFilter=e'"; nocase; sid:1000222; rev:1; reference:cve,CVE-2021-32819; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-32819;)

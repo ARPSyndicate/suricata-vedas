@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WebIQ Directory Traversal Attempt"; content:".webui/..%5c"; nocase; sid:1000280; rev:1; reference:cve,CVE-2024-8752; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-8752;)

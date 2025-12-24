@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress Easy Social Feed XSS Attempt"; content:"type="; nocase; content:"<"; nocase; within:5; sid:1000405; rev:1; reference:cve,CVE-2021-25120; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-25120;)

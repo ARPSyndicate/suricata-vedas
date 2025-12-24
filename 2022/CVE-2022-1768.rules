@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress RSVPMaker SQL Injection Attempt"; content:"rsvp_id="; content:"(select"; nocase; sid:1000389; rev:1; reference:cve,CVE-2022-1768; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-1768;)

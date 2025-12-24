@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"NextChat SSRF/XSS attempt"; content:"GET /api/cors"; nocase; sid:1000349; rev:1; reference:cve,CVE-2023-49785; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-49785;)

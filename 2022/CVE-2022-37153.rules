@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Artica Proxy XSS Attempt"; content:"admin%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E"; nocase; sid:1000394; rev:1; reference:cve,CVE-2022-37153; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-37153;)

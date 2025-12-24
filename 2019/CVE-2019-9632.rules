@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"ESAFENET CDG Arbitrary File Download Attempt"; content:"command=downclientpak"; nocase; content:"InstallationPack="; nocase; content:"../WEB-INF/"; nocase; sid:1000319; rev:1; reference:cve,CVE-2019-9632; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-9632;)

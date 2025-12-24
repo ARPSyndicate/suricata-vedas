@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"TOTOLink A950RG Command Injection Attempt"; content:"GET /cgi-bin/downloadFlile.cgi?payload="; nocase; content:"`"; nocase; sid:1000235; rev:1; reference:cve,CVE-2022-25082; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-25082;)

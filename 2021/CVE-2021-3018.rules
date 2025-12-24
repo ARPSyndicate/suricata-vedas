@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Ipeak Ibexwebcms SQL Injection Attempt"; content:"id=1%20AND%207334=BENCHMARK"; nocase; sid:1000398; rev:1; reference:cve,CVE-2021-3018; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-3018;)

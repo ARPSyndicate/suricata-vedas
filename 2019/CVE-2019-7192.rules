@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"QNAP Photo Station Remote Command Execution Attempt"; content:"/photo/p/api/video.php"; nocase; content:"filename"; nocase; content:"./../../../../../etc/passwd"; nocase; sid:1000261; rev:1; reference:cve,CVE-2019-7192; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-7192;)

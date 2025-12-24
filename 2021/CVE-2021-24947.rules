@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress RVM Arbitrary File Read Attempt"; content:"action=rvm_import_regions"; nocase; content:"rvm_upload_regions_file_path"; nocase; sid:1000277; rev:1; reference:cve,CVE-2021-24947; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-24947;)

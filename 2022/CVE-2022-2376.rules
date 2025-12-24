@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress Directorist Unauthenticated Email Address Disclosure attempt"; content:"action=directorist_author_pagination"; nocase; sid:1000382; rev:1; reference:cve,CVE-2022-2376; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-2376;)

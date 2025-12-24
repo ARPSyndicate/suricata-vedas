@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"SugarCRM PHP Object Injection Attempt"; content:"O:14:\"SugarCacheFile\""; nocase; sid:1000007; rev:1; reference:cve,CVE-2025-25034; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-25034;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"H3C ER8300G2-X Password Disclosure Attempt"; content:"GET /userLogin.asp/../actionpolicy_status/../"; nocase; sid:1000046; rev:1; reference:cve,CVE-2024-32238; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-32238;)

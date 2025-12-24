@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"SQL Injection attempt on CRMS"; content:"-1 union select 1,md5("; nocase; content:")--+"; nocase; sid:1000361; rev:1; reference:cve,CVE-2022-32025; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-32025;)

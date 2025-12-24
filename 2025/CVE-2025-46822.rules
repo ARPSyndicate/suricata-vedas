@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Java Spring Boot Path Traversal Attempt"; content:"/api/v1/files/"; nocase; content:"/"; nocase; distance:0; sid:1000010; rev:1; reference:cve,CVE-2025-46822; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-46822;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WordPress EventON Calendar XSS Attempt"; content:"<svg/onload=alert(1)>"; nocase; sid:1000411; rev:1; reference:cve,CVE-2020-29395; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-29395;)
