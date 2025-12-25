@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"LG LED Assistant Unauthenticated Password Reset"; flow:established,to_server; http.method; content:"PUT"; http.uri; content:"/api/changePw"; nocase; distance:0; content:"X-Forwarded-For: 127.0.0.1"; sid:1000288; rev:1; reference:cve,CVE-2024-2862; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-2862;)

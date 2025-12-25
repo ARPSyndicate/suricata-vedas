@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"LearnDash LMS Sensitive Information Exposure"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wp-json/wp/v2/sfwd-question"; nocase; sid:1001440; rev:1; reference:cve,CVE-2024-1208; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-1208;)

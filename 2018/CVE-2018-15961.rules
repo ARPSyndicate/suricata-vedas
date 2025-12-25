@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Adobe ColdFusion Arbitrary File Upload"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/cf_scripts/scripts/ajax/ckeditor/plugins/filemanager/upload.cfm"; nocase; sid:1000233; rev:1; reference:cve,CVE-2018-15961; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-15961;)

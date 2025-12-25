@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"VMware vRealize Operations Manager SSRF Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/casa/nodes/thumbprints"; nocase; sid:1001576; rev:1; reference:cve,CVE-2021-21975; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-21975;)

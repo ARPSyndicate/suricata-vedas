@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"MLFlow Sensitive Information Disclosure"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/api/2.0/preview/mlflow/"; nocase; http.content_type; content:"text/plain"; sid:1001807; rev:1; reference:cve,CVE-2023-43472; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-43472;)

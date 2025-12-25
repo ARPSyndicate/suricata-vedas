@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Faculty Evaluation System Unauthenticated File Upload"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/ajax.php?action=save_user"; nocase; sid:1001295; rev:1; reference:cve,CVE-2023-33440; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-33440;)

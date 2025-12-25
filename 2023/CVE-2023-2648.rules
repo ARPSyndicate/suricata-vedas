@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Weaver E-Office Unrestricted Upload Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/inc/jquery/uploadify/uploadify.php"; nocase; distance:0; content:"|3b|<md5_hash_here>|3b|"; sid:1000185; rev:1; reference:cve,CVE-2023-2648; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-2648;)

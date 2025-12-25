@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Eyou Mail System RCE Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/admin/domain/ip_login_set/d_ip_login_get.php"; nocase; distance:0; content:"|7c|id"; sid:1002120; rev:1; reference:cve,CVE-2014-1203; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-1203;)

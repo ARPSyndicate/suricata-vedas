@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"Cisco CMP RCE attempt"; content:"CISCO_KITS"; nocase; sid:1003633; rev:1; reference:cve,CVE-2017-3881; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2017-3881;)

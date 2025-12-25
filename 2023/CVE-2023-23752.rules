@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Joomla! Unauthenticated Information Disclosure"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/api/index.php/v1/config/application"; content:"public=true"; nocase; distance:0; sid:1002867; rev:1; reference:cve,CVE-2023-23752; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-23752;)

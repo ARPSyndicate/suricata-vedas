@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"LearnPress RCE Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wp-json/lp/v1/load_content_via_ajax/"; nocase; distance:0; content:"O:13:\"WP_HTML_Token\""; fast_pattern; sid:1003244; rev:1; reference:cve,CVE-2023-6634; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-6634;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ETQ Reliance Authentication Bypass Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/reliance/resources/sessions|3f|"; nocase; distance:0; content:"|20|SYSTEM |20|"; sid:1002826; rev:1; reference:cve,CVE-2025-34143; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-34143;)

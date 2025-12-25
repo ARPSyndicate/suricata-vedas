@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"LiveZilla Server XSS Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/mobile/index.php"; nocase; distance:0; content:"|3b|"; fast_pattern; sid:1001837; rev:1; reference:cve,CVE-2019-12962; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-12962;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Tenda AC1200 Authorization Bypass Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/goform/downloadSyslog/syslog.log|3f|"; nocase; distance:0; sid:1002227; rev:1; reference:cve,CVE-2022-40843; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-40843;)

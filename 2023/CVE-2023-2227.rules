@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Modoboa Authorization Bypass"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/api/v2/parameters/core/"; nocase; sid:1000595; rev:1; reference:cve,CVE-2023-2227; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-2227;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Zabbix SAML SSO Authentication Bypass Attempt"; flow:established,to_server; http.method; content:"GET"; http.cookie; content:"zbx_session="; distance:0; content:"|3d|"; nocase; fast_pattern; sid:1002917; rev:1; reference:cve,CVE-2022-23131; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-23131;)

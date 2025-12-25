@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Apache ShardingSphere ElasticJob-UI Privilege Escalation Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/api/login"; nocase; sid:1001760; rev:1; reference:cve,CVE-2022-22733; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-22733;)

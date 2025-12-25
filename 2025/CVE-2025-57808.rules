@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ESPHome Web Server Authentication Bypass Attempt"; flow:established,to_server; http.method; content:"GET"; http.header; content:"Authorization"; content:"Basic "; nocase; sid:1002376; rev:1; reference:cve,CVE-2025-57808; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-57808;)
