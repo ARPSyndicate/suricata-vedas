@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"MoinMoin XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/action/"; nocase; distance:0; content:"|3b|title|3d|"; nocase; distance:0; content:"|3e|<script>"; nocase; sid:1001755; rev:1; reference:cve,CVE-2010-2970; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2010-2970;)

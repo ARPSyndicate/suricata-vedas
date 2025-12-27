@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"MoinMoin XSS in Despam action"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/action/Despam.py"; nocase; distance:0; sid:1001604; rev:1; reference:cve,CVE-2010-0828; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2010-0828;)
