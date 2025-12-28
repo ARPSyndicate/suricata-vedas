@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WooCommerce SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wc/store/products/collection-data?calculate_attribute_counts[][taxonomy]"; nocase; distance:0; sid:1003697; rev:1; reference:cve,CVE-2021-32789; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-32789;)

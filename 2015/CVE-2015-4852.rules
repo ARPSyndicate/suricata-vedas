@@ -1,0 +1,1 @@
+alert tcp any any -> any 7001 (msg:"Oracle WebLogic Server Java Deserialization RCE Attempt"; flow:to_server,established; content:"|ac ed 00 05|"; nocase; distance:0; sid:1003718; rev:1; reference:cve,CVE-2015-4852; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-4852;)

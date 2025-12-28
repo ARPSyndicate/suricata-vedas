@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"vBulletin Unserialize Code Execution Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/ajax/api/hook/decodeArguments"; nocase; distance:0; content:"O:12:\"vB_dB_Result\""; fast_pattern; sid:1003698; rev:1; reference:cve,CVE-2015-7808; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-7808;)
