@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Fortinet FortiWeb Authentication Bypass Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/api/v2.0/cmdb/system/admin%3f/../../../../../cgi-bin/fwbcgi"; nocase; distance:0; sid:1003681; rev:1; reference:cve,CVE-2025-64446; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-64446;)

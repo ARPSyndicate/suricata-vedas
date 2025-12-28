@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Cisco IOS XE Unauthenticated RCE Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/%2577ebui_wsma_HTTP/webui_wsma_HTTP/put/"; nocase; distance:0; sid:1003666; rev:1; reference:cve,CVE-2023-20198; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-20198;)

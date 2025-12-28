@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"IBM Data Risk Manager Command Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/albatross/getAppInfo"; startswith; fast_pattern; content:"|3b|command|3d|"; nocase; distance:0; sid:1003679; rev:1; reference:cve,CVE-2020-4428; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-4428;)

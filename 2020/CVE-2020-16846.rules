@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SaltStack Shell Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/run"; content:"token=1337&client=ssh&tgt=*&fun=a&roaster="; nocase; distance:0; sid:1003685; rev:1; reference:cve,CVE-2020-16846; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-16846;)

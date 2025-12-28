@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"PHP IMAP Remote Code Execution Attempt"; flow:to_server,established; content:"-oProxyCommand"; nocase; distance:0; sid:1003694; rev:1; reference:cve,CVE-2018-19518; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-19518;)
