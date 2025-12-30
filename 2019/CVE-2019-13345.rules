@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Squid cachemgr.cgi XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/cachemgr.cgi"; nocase; distance:0; content:"|3c|script|3e|"; nocase; distance:0; content:"|3c|/script|3e|"; nocase; sid:1003745; rev:1; reference:cve,CVE-2019-13345; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-13345;)
