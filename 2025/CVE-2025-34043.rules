@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Vacron NVR Remote Command Injection"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/cgi-bin/board.cgi"; nocase; distance:0; content:"cmd="; fast_pattern; sid:1003855; rev:1; reference:cve,CVE-2025-34043; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-34043;)

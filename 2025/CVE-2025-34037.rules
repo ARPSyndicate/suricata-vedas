@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Linksys E-Series Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/tmUnblock.cgi|3f|"; nocase; distance:0; content:"ttcp_ip|3d|-h|20|"; nocase; sid:1003858; rev:1; reference:cve,CVE-2025-34037; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-34037;)

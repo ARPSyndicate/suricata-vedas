@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Belkin F9K1122 Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/goform/mp"; nocase; distance:0; content:"command="; sid:1003784; rev:1; reference:cve,CVE-2025-7083; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-7083;)
