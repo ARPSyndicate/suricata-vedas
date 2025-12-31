@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Nagios XI Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/nagiosxi/ajaxhelper.php"; nocase; content:"action=cmdsubsys"; fast_pattern; sid:1003739; rev:1; reference:cve,CVE-2020-15901; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-15901;)
