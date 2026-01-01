@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"phpBB2 Remote Code Execution Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/viewtopic.php"; nocase; distance:0; content:"highlight=%2527"; nocase; distance:0; sid:1003890; rev:1; reference:cve,CVE-2004-1315; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2004-1315;)

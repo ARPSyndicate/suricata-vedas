@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SPIP PHP Object Injection Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/endpoint|3f|"; startswith; fast_pattern; content:"|3b|"; nocase; distance:0; content:"|2e|"; sid:1003917; rev:1; reference:cve,CVE-2016-3154; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2016-3154;)
