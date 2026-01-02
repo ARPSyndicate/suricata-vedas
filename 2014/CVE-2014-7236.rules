@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"TWiki Debugenableplugins RCE Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/do/view/Main/WebHome"; startswith; fast_pattern; content:"debugenableplugins="; nocase; distance:0; sid:1004839; rev:1; reference:cve,CVE-2014-7236; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-7236;)

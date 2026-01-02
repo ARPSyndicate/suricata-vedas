@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Alienvault OSSIM Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/av-centerd"; content:"<soapenv:Envelope"; nocase; distance:0; sid:1005085; rev:1; reference:cve,CVE-2014-3805; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-3805;)

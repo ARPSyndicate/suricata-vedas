@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ManageEngine OpManager RCE Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/manageengine/opManager/agentDataHandler"; content:"FILENAME"; nocase; distance:0; sid:1004239; rev:1; reference:cve,CVE-2014-6035; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-6035;)
