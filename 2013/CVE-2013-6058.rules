@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"appRain CMF SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/blog-by-cat/"; nocase; distance:0; content:"|3b|'|27|"; nocase; distance:0; sid:1006673; rev:1; reference:cve,CVE-2013-6058; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-6058;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ManageEngine SupportCenter Plus Directory Traversal"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/WorkOrder.do"; startswith; fast_pattern; content:"|2e|..|2f|"; nocase; distance:0; sid:1006763; rev:1; reference:cve,CVE-2014-100002; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-100002;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"DataLife Engine PHP Code Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/engine/preview.php"; nocase; content:"|3b|' OR eval(base64_decode(|28|"; fast_pattern; sid:1006430; rev:1; reference:cve,CVE-2013-1412; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-1412;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"3CX Path Traversal Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/Electron/download/../../"; nocase; distance:0; sid:1006368; rev:1; reference:cve,CVE-2022-48482; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-48482;)

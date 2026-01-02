@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"CKEditor XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/ckeditor/"; nocase; distance:0; content:"|22|onerror|22|"; sid:1006734; rev:1; reference:cve,CVE-2020-27193; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-27193;)

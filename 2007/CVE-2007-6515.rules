@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SiteScape Enterprise Forum 7 TCL Injection"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/dispatch.cgi"; startswith; fast_pattern; content:"|3b|set%20sock%20[socket%20"; nocase; distance:0; sid:1005456; rev:1; reference:cve,CVE-2007-6515; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2007-6515;)

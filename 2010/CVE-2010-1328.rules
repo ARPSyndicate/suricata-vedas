@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"TornadoStore XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/services/login_registrese.php3|3a|"; nocase; distance:0; content:"|3c|script|3e|"; fast_pattern; sid:1006556; rev:1; reference:cve,CVE-2010-1328; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2010-1328;)

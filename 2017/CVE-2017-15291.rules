@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"TP-LINK TL-MR3220 XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/goform/WlanMacFilter"; nocase; distance:0; content:"Description="; distance:0; content:"<script>"; nocase; sid:1006605; rev:1; reference:cve,CVE-2017-15291; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2017-15291;)

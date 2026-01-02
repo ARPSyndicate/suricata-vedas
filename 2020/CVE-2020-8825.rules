@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Vanilla Forums 2.6.3 Stored XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/dashboard/settings/branding"; nocase; content:"data:image/"; distance:0; content:"|3b|script|3e|"; nocase; sid:1006565; rev:1; reference:cve,CVE-2020-8825; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-8825;)

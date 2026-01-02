@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OTRS Stored XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/Ticket/History.pl"; nocase; distance:0; content:"|3b|<img/onerror|3d|"; fast_pattern; sid:1006486; rev:1; reference:cve,CVE-2014-1695; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-1695;)

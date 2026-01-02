@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"KONE KGC Unauthenticated Local File Inclusion"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/file?file="; distance:0; content:"&name="; nocase; content:"cmd.exe"; nocase; sid:1006548; rev:1; reference:cve,CVE-2018-15486; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-15486;)

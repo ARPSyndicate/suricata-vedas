@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Mijosoft MijoSearch XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/index.php?option=com_mijosearch&task=search&searchword="; nocase; distance:0; content:"<script"; fast_pattern; sid:1006376; rev:1; reference:cve,CVE-2013-6878; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-6878;)

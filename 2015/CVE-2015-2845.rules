@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"GoAutoDial SQL Injection / Command Execution / File Upload"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/index.php/go_site/go_get_user_info/"; nocase; distance:0; content:"' OR active='Y"; sid:1006484; rev:1; reference:cve,CVE-2015-2845; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-2845;)
