@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"QNAP QTS Command Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/cgi-bin/authLogin.cgi"; nocase; distance:0; content:"QNAPVJBD"; fast_pattern; sid:1004065; rev:1; reference:cve,CVE-2017-6359; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2017-6359;)

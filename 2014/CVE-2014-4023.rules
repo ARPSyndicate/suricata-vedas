@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"F5 BIG-IP echo.jsp XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/tmui/dashboard/echo.jsp"; nocase; distance:0; content:"|3e|<script|22|"; fast_pattern; sid:1003347; rev:1; reference:cve,CVE-2014-4023; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-4023;)

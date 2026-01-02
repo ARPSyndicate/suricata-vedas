@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Symantec SEPM XSS Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/Reporting/Admin/notificationpopup.php"; nocase; distance:0; content:"alert(createModalDialogFromURL)"; sid:1004022; rev:1; reference:cve,CVE-2016-3652; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2016-3652;)

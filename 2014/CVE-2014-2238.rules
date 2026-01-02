@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"MantisBT SQL Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/adm_config_report.php"; nocase; distance:0; content:"-7856' UNION ALL SELECT"; sid:1004053; rev:1; reference:cve,CVE-2014-2238; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-2238;)
