@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Apache POI XXE Processing Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/xssf/export-to-xml"; content:"<!DOCTYPE"; nocase; distance:0; sid:1008246; rev:1; reference:cve,CVE-2019-12415; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-12415;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Hikvision CSMP iSecure Center Directory Traversal"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/center/api/files"; nocase; sid:1007868; rev:1; reference:cve,CVE-2023-53691; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-53691;)

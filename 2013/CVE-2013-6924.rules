@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Seagate BlackArmor NAS Remote Command Execution"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/backupmgt/getAlias.php"; content:"|3b|"; nocase; distance:0; content:"|2e|"; sid:1007398; rev:1; reference:cve,CVE-2013-6924; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-6924;)

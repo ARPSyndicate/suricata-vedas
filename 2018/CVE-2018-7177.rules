@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Joomla! Saxum Numerology SQL Injection"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/index.php?option=com_saxumnumerology&view=savedresult&publicid="; nocase; distance:0; content:"' OR '1'='1"; sid:1008205; rev:1; reference:cve,CVE-2018-7177; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-7177;)

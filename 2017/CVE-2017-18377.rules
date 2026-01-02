@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WIFICAM Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/set_ftp.cgi"; startswith; fast_pattern; content:"|3b|"; nocase; distance:0; content:"|20|pwd|3d|"; sid:1007497; rev:1; reference:cve,CVE-2017-18377; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2017-18377;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Plone/Zope RCE Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/p_/webdav/xmltools/minidom/xml/sax/saxutils/os/popen2"; nocase; sid:1007981; rev:1; reference:cve,CVE-2011-3587; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2011-3587;)

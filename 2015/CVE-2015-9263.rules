@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Idera Up.time Arbitrary File Upload"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wizards/post2file.php"; nocase; sid:1007687; rev:1; reference:cve,CVE-2015-9263; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-9263;)

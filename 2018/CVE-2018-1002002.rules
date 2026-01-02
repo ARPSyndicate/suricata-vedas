@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WordPress Arigato Autoresponder and Newsletter SQL Injection"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wp-admin/admin.php?page=bft_list"; content:"mass_delete=1&del_ids="; nocase; sid:1008010; rev:1; reference:cve,CVE-2018-1002002; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-1002002;)

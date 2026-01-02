@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OpenEMR SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/interface/forms/eye_mag/taskman.php"; nocase; distance:0; content:"' and updatexml(1,concat(0x7e,"; fast_pattern; sid:1007916; rev:1; reference:cve,CVE-2018-17179; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-17179;)

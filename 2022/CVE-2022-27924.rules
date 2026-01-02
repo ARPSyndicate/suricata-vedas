@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Zimbra CRLF Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/service/soap"; nocase; distance:0; content:"|0a|"; sid:1007685; rev:1; reference:cve,CVE-2022-27924; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-27924;)

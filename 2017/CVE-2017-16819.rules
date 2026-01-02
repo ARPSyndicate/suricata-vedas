@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Icon Time Systems RTC-1000 Stored XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/employee.html"; nocase; content:"<script"; fast_pattern; sid:1007629; rev:1; reference:cve,CVE-2017-16819; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2017-16819;)

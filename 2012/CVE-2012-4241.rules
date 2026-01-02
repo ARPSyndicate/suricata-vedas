@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Microcart 1.0 XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/checkout.php"; nocase; content:"<script"; fast_pattern; sid:1008243; rev:1; reference:cve,CVE-2012-4241; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2012-4241;)

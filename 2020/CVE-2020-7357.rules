@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"CAYIN CMS Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/cgi-bin/system.cgi"; startswith; fast_pattern; content:"|3b|"; nocase; distance:0; content:"|2e|exec|28|";  sid:1008152; rev:1; reference:cve,CVE-2020-7357; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-7357;)

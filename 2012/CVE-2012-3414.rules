@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SWFUpload XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wp-admin/upload.php"; nocase; distance:0; content:"movieName="; nocase; distance:0; content:"<script>"; nocase; sid:1007346; rev:1; reference:cve,CVE-2012-3414; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2012-3414;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ILIAS eLearning Open Redirect"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/shib_logout.php"; nocase; distance:0; content:"return="; nocase; distance:0; content:"http://"; nocase; distance:0; sid:1008092; rev:1; reference:cve,CVE-2022-45916; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-45916;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"PTZOptics PT30X-SDI/NDI Web Camera Vulnerabilities"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/cgi-bin/param.cgi"; nocase; sid:1008341; rev:1; reference:cve,CVE-2024-8957; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-8957;)

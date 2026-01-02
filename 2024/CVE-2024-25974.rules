@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OpenOLAT XSS in Course Name"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/course/create"; content:"<img src=x onerror=alert('XSS Attack')>"; nocase; sid:1007490; rev:1; reference:cve,CVE-2024-25974; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-25974;)

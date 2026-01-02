@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OWASP ESAPI XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/page?"; nocase; distance:0; content:"javascript:"; nocase; sid:1008156; rev:1; reference:cve,CVE-2022-24891; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-24891;)

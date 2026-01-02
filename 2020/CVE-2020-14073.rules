@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"PRTG Network Monitor XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/maps/mapdesigner.htm"; nocase; distance:0; content:"<SCRIPT>"; nocase; distance:0; content:"</SCRIPT>"; nocase; sid:1008136; rev:1; reference:cve,CVE-2020-14073; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-14073;)

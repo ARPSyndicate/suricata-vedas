@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"TwonkyMedia Server Directory Traversal Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/rpc/set_all"; nocase; content:"contentdir=/../"; nocase; sid:1007645; rev:1; reference:cve,CVE-2018-7171; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-7171;)

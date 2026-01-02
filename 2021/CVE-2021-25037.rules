@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"All in One SEO SQL Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wp-json/aioseo/v1/objects"; nocase; distance:0; content:"|3b|query|3d|"; content:"|27| OR |27|1|3d|1|27|"; sid:1007547; rev:1; reference:cve,CVE-2021-25037; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-25037;)

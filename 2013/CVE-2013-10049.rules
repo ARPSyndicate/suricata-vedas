@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Raidsonic NAS OS Command Injection"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/cgi/time/timeHandler.cgi"; nocase; distance:0; content:"timeZone=Amsterdam`"; fast_pattern; sid:1008352; rev:1; reference:cve,CVE-2013-10049; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-10049;)

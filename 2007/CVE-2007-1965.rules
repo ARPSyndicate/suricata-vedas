@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"eXV² CMS 2.10 Remote XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/modules/news/archive.php|3a|"; nocase; distance:0; content:"|3b|<script|22|"; nocase; distance:0; sid:1007656; rev:1; reference:cve,CVE-2007-1965; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2007-1965;)

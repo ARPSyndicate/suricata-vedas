@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"PHP Template Store Script XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/profile/update"; nocase; content:"<script"; fast_pattern; sid:1008094; rev:1; reference:cve,CVE-2018-14869; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-14869;)

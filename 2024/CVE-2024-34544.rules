@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WAVLINK AC3000 Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wireless.cgi"; content:"page=AddMac"; content:"addMac="; distance:0; content:"|3b|"; nocase; sid:1007541; rev:1; reference:cve,CVE-2024-34544; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-34544;)

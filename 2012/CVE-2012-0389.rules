@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"MailEnable XSS Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/mewebmail/Mondo/lang/sys/ForgottenPassword.aspx"; nocase; distance:0; content:"|3b|Username|3d|"; fast_pattern; sid:1007648; rev:1; reference:cve,CVE-2012-0389; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2012-0389;)

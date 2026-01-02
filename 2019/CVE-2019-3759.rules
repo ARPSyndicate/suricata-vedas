@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"RSA IG&L Aveksa 7.1.1 Remote Code Execution Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/aveksaWFArchitect/scripts/"; nocase; distance:0; content:"|3b|statements|3a|"; fast_pattern; sid:1008093; rev:1; reference:cve,CVE-2019-3759; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-3759;)

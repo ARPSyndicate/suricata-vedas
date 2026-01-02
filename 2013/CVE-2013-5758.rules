@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Yealink SIP-T38G Remote Command Execution"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/cgi-bin/cgiServer.exx"; content:"system"; nocase; sid:1007361; rev:1; reference:cve,CVE-2013-5758; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-5758;)

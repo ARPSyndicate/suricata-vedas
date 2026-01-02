@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Node.js Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/execute|3f|"; nocase; distance:0; content:"|22|cmd|22|"; nocase; distance:0; sid:1008071; rev:1; reference:cve,CVE-2024-27980; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-27980;)

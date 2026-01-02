@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Belkin LINKSYS RE6500 Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/goform/goform_systemCommand"; nocase; distance:0; content:"|3b|command|3d|"; sid:1007894; rev:1; reference:cve,CVE-2020-35714; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-35714;)

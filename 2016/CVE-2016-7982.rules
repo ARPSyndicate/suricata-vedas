@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SPIP Path Traversal Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/ecrire/?exec=valider_xml"; content:"var_url="; nocase; distance:0; content:"|2e|..|2f|"; nocase; distance:0; sid:1008313; rev:1; reference:cve,CVE-2016-7982; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2016-7982;)
