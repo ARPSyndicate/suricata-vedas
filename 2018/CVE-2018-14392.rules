@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"MyBB New Threads Plugin XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/newthread.php|3f|"; nocase; distance:0; content:"|3b|<script|3e|"; sid:1007160; rev:1; reference:cve,CVE-2018-14392; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-14392;)

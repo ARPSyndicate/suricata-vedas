@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Cisco EPC3928 XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/goform/Administration"; nocase; content:"<script>alert('XSS Attack')</script>"; fast_pattern; sid:1006971; rev:1; reference:cve,CVE-2015-6402; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-6402;)

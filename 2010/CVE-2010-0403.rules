@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"phpGroupWare Local File Inclusion Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/phpgw/about.php"; nocase; distance:0; content:"|3b|app|3d|"; content:"|2e|..|2e|"; sid:1006978; rev:1; reference:cve,CVE-2010-0403; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2010-0403;)

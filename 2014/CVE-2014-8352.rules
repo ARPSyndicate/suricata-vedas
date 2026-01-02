@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"CNIL CookieViz XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/json.php"; nocase; distance:0; content:"max_date="; content:"|3e|<script|3e|"; fast_pattern; sid:1006885; rev:1; reference:cve,CVE-2014-8352; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-8352;)

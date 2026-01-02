@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ISPConfig SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/monitor/show_sys_state.php"; nocase; distance:0; content:"|3b|server|3d|"; fast_pattern; sid:1006875; rev:1; reference:cve,CVE-2015-4118; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-4118;)

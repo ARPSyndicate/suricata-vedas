@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Mumara Classic SQL Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/license_update.php"; nocase; distance:0; content:"|3b|MUMARA-Delux-01|27|"; fast_pattern; sid:1005956; rev:1; reference:cve,CVE-2021-43329; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-43329;)

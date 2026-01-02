@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WordPress BackWPup XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wp-admin/admin.php"; nocase; distance:0; content:"tab="; content:"|3b|"; fast_pattern; sid:1006974; rev:1; reference:cve,CVE-2013-4626; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-4626;)

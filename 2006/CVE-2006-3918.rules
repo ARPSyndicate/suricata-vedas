@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Oracle HTTP Server XSS Header Injection"; flow:established,to_server; http.method; content:"GET"; http.header; content:"Expect"; nocase; distance:0; content:"|3c|script|3e|"; nocase; distance:0; sid:1007158; rev:1; reference:cve,CVE-2006-3918; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2006-3918;)

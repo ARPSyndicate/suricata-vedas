@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Joomla! Visual Calendar SQL Injection"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/index.php"; content: "|3f|option|3d|com_visualcalendar|3f|view|3d|load|3f|id|3d|"; nocase; sid:1006888; rev:1; reference:cve,CVE-2018-6395; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-6395;)

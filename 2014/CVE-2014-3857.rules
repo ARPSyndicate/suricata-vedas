@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Kerio Control SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/print.php"; content:"x_16=16221 AND 1="; nocase; distance:0; sid:1006986; rev:1; reference:cve,CVE-2014-3857; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-3857;)

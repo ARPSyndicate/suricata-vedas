@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Avantune Genialcloud ProJ 10 XSS Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/eportal/"; nocase; content:"msg="; distance:0; content:"|3b|alert|28|"; nocase; sid:1006868; rev:1; reference:cve,CVE-2022-29296; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-29296;)

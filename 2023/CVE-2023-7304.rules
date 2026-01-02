@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Ruijie RG-UAC Command Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/nmc_sync.php?"; distance:0; content:"cmd="; nocase; distance:0; content:" "; nocase; fast_pattern; sid:1007238; rev:1; reference:cve,CVE-2023-7304; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-7304;)
