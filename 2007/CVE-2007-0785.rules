@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Flip 2.01-final RFI Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/previewtheme.php?theme=1&inc_path="; nocase; distance:0; sid:1006159; rev:1; reference:cve,CVE-2007-0785; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2007-0785;)

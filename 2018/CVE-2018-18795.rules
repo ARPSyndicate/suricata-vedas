@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SEMS SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/student/index.php|3f|view|3d|view|26|id|3d|"; nocase; distance:0; content:"|27|union|20|select|20|"; sid:1006252; rev:1; reference:cve,CVE-2018-18795; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-18795;)
