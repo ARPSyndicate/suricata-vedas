@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"D-Link DWL-2600AP Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/admin.cgi?action=config_restore"; nocase; content:"|3b|"; distance:0; content:"|3b|"; nocase; sid:1004078; rev:1; reference:cve,CVE-2019-20499; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-20499;)

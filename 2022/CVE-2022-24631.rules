@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"AudioCodes Device Manager Express XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/ajaxTenants.php"; startswith; fast_pattern; content:"|3c|script|3e|"; nocase; distance:0; sid:1004782; rev:1; reference:cve,CVE-2022-24631; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-24631;)

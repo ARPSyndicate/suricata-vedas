@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Jasmin Ransomware Directory Traversal"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/download_file.php"; nocase; distance:0; content:"|3b|..|2f|"; nocase; distance:0; sid:1004983; rev:1; reference:cve,CVE-2024-30851; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-30851;)

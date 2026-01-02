@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Apache Archiva XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/archiva/admin/configuration"; nocase; distance:0; content:"javascript:alert('XSS Attack!')"; sid:1004367; rev:1; reference:cve,CVE-2019-0213; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-0213;)

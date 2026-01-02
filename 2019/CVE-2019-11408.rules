@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"FusionPBX RCE Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/app/operator_panel/index_inc.php"; nocase; distance:0; content:"|3b|<script>"; fast_pattern; sid:1005971; rev:1; reference:cve,CVE-2019-11408; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-11408;)

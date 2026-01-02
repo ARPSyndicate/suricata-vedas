@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Cisco RV Series Authentication Bypass / Command Injection"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/upload"; sid:1005624; rev:1; reference:cve,CVE-2022-20707; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-20707;)

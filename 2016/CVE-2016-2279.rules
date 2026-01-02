@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Rockwell Allen-Bradley CompactLogix XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/rokform/SysDataDetail"; startswith; fast_pattern; content:"|3b|<script|3e|"; nocase; distance:0; sid:1006157; rev:1; reference:cve,CVE-2016-2279; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2016-2279;)

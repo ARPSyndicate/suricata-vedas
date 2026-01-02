@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"dtale RCE Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/dtale/test-filter/"; nocase; distance:0; content:"|28|os.system|28|"; sid:1006208; rev:1; reference:cve,CVE-2024-3408; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-3408;)

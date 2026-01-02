@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Ruijie BCR810W OS Command Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/tracert"; startswith; fast_pattern; content:"|7c|"; nocase; distance:0; content:"|2e|"; sid:1005761; rev:1; reference:cve,CVE-2023-3608; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-3608;)

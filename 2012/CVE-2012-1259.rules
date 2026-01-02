@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Scrutinizer SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/cgi-bin/scrut_fa_exclusions.cgi"; content:"' OR "; nocase; sid:1005803; rev:1; reference:cve,CVE-2012-1259; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2012-1259;)

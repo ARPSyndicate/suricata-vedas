@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"GitWeb Remote Command Execution Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/gitweb?"; nocase; distance:0; content:"|27|(echo|20|"; fast_pattern; sid:1006050; rev:1; reference:cve,CVE-2008-5517; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2008-5517;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Sitecore.NET Directory Traversal Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/sitecore/shell/default.aspx?xmlcontrol=LogViewerDetails&file="; nocase; distance:0; content:"|2e|"; sid:1004162; rev:1; reference:cve,CVE-2018-7669; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-7669;)

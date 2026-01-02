@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Open-Xchange Server Directory Traversal Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/public/../"; nocase; distance:0; sid:1005953; rev:1; reference:cve,CVE-2013-1645; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-1645;)

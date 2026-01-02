@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"RICOH MP C6503 Plus XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/web/entry/en/address/adrsSetUserWizard.cgi"; nocase; distance:0; content:"<script"; nocase; sid:1004504; rev:1; reference:cve,CVE-2018-17311; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-17311;)

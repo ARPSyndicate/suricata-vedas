@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WordPress Membership For WooCommerce Arbitrary File Upload"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wp-admin/admin-ajax.php?action=wps_membership_csv_file_upload"; nocase; sid:1004044; rev:1; reference:cve,CVE-2022-4395; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-4395;)

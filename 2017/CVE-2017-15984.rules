@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"CMS Lite 1.4 SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/index.php"; content:"S="; nocase; distance:0; sid:1004302; rev:1; reference:cve,CVE-2017-15984; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2017-15984;)

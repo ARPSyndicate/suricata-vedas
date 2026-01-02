@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"iScripts EasyCreate XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/save.php"; nocase; distance:0; content:"</title><script>"; fast_pattern; sid:1005076; rev:1; reference:cve,CVE-2018-9236; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-9236;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"My Little Forum XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/index.php"; nocase; distance:0; content:"back="; nocase; distance:0; content:"<script>"; nocase; sid:1004105; rev:1; reference:cve,CVE-2015-1435; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-1435;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"RemoteClinic 2.0 XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/patients/register|3a|"; nocase; distance:0; content:"|3b|XSS|3e|"; nocase; sid:1004354; rev:1; reference:cve,CVE-2021-30034; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-30034;)

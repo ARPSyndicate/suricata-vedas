@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"RoundCube Webmail SVG XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/_request"; startswith; fast_pattern; content:"|3c|svg|2f|onload|3d|"; nocase; distance:0; sid:1005031; rev:1; reference:cve,CVE-2023-5631; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-5631;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Craft CMS Logs Plugin Path Traversal"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/admin/actions/logs/logs/stream"; nocase; distance:0; content:"?log=../../"; nocase; sid:1005734; rev:1; reference:cve,CVE-2022-23409; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-23409;)

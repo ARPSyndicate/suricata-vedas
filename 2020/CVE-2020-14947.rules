@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OCS Inventory NG RCE Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/index.php?function=admin_conf"; content:"|3b| ncat -e /bin/bash "; nocase; distance:0; sid:1005841; rev:1; reference:cve,CVE-2020-14947; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-14947;)

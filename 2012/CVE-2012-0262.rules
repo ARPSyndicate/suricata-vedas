@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OP5 Monitor Remote Command Execution"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/op5config/welcome"; startswith; fast_pattern; content:"|3b|do=do=Login&password=|26|"; nocase; distance:0; sid:1005240; rev:1; reference:cve,CVE-2012-0262; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2012-0262;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"SnipeIT Stored XSS Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/api/v1/locations"; startswith; fast_pattern; content:"|3c|script|3e|"; nocase; distance:0; sid:1005394; rev:1; reference:cve,CVE-2023-5452; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-5452;)

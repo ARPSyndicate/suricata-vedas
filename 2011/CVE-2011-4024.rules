@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OCS Inventory NG XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/ocsreports/"; nocase; distance:0; content:"<script"; nocase; sid:1005542; rev:1; reference:cve,CVE-2011-4024; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2011-4024;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"HorizontCMS Arbitrary PHP File Upload"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/admin/file-manager/fileupload"; nocase; sid:1005687; rev:1; reference:cve,CVE-2020-27387; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-27387;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Dell EMC Isilon OneFS XSS in Job Operations Page"; flow:established,to_server; http.method; content:"PUT"; http.uri; content:"/platform/1/job/policies"; nocase; sid:1004935; rev:1; reference:cve,CVE-2018-1201; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-1201;)

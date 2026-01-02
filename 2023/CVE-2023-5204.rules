@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WordPress AI ChatBot SQL Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wp-admin/admin-ajax.php"; content:"action=wpbo_search_response"; content:"strid="; nocase; sid:1004867; rev:1; reference:cve,CVE-2023-5204; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-5204;)

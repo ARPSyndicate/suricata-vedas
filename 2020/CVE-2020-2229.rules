@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Jenkins XSS Plugin Upload Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/pluginManager/uploadPlugin"; content:"plugin"; nocase; sid:1004573; rev:1; reference:cve,CVE-2020-2229; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-2229;)

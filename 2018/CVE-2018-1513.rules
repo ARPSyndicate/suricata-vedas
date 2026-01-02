@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"IBM Sterling B2B Integrator XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/ibm/ma/api/v1/users"; nocase; distance:0; content:"|3e|<script|22|"; fast_pattern; sid:1004501; rev:1; reference:cve,CVE-2018-1513; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-1513;)

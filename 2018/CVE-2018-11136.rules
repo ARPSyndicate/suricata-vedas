@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Quest KACE SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/common/download_agent_installer.php"; nocase; distance:0; content:"orgID="; content:"|3b|"; nocase; distance:0; sid:1005795; rev:1; reference:cve,CVE-2018-11136; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-11136;)

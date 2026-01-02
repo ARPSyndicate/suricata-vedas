@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Dell EMC Isilon OneFS XSS Attack"; flow:established,to_server; http.method; content:"PUT"; http.uri; content:"/platform/3/cluster/identity"; content:"<script>"; nocase; sid:1006150; rev:1; reference:cve,CVE-2018-1186; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-1186;)

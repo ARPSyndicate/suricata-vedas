@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Advantech R-SeeNet SQL Injection Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/r-seenet/index.php"; content:"|3b|desc_filter|22|"; content:"|27|'|22|"; nocase; distance:0; sid:1006062; rev:1; reference:cve,CVE-2021-21930; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-21930;)

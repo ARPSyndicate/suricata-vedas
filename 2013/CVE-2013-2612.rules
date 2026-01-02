@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Huawei E587 Command Injection"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/webui/login.html"; startswith; fast_pattern; content:"|3b|id|20|uname|20|-a|20|"; nocase; distance:0; sid:1005662; rev:1; reference:cve,CVE-2013-2612; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2013-2612;)
