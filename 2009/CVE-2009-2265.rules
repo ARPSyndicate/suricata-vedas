@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Adobe ColdFusion 8 RCE Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/CFIDE/scripts/ajax/FCKeditor/editor/filemanager/connectors/cfm/upload.cfm"; nocase; sid:1008448; rev:1; reference:cve,CVE-2009-2265; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2009-2265;)

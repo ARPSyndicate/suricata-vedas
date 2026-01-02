@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Docsify Reflective XSS Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/#//"; nocase; distance:0; content:"</script> "; content:"<script"; sid:1008371; rev:1; reference:cve,CVE-2020-7680; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-7680;)

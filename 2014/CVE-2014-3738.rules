@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Zenoss Stored XSS Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/zport/dmd/Devices"; nocase; distance:0; content:"|3e|<img src|3d|x|3e| onerror|3d|"; fast_pattern; sid:1008614; rev:1; reference:cve,CVE-2014-3738; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-3738;)

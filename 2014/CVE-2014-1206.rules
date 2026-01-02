@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"OWA Pre-Auth SQL Injection"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/owa/index.php"; content:"owa_email_address"; nocase; sid:1008538; rev:1; reference:cve,CVE-2014-1206; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-1206;)
