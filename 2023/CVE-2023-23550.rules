@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"Milesight UR32L Command Injection Attempt"; flow:to_server,established; content:"POST /cgi-bin/ys_thirdparty HTTP/1.1"; nocase; content:"action=delete_user&username="; distance:0; content:"|3b|"; nocase; fast_pattern; sid:1007142; rev:1; reference:cve,CVE-2023-23550; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2023-23550;)

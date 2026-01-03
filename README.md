@@ -11,16 +11,16 @@ By making these AI-generated rules openly available, we hope to enable the secur
 
 The goal is to bridge AI-driven automation with open-source collaboration to improve reliability and accelerate intelligence-driven detection engineering for all.
 
-### Total Rules: 6642
+### Total Rules: 7499
 | CVE Year | CVE Year | CVE Year | CVE Year |
 | ----- | ----- | ------ | ------ |
 | 1999 (4) | 2000 (7) | 2001 (9) | 2002 (9) |
-| 2003 (1) | 2004 (5) | 2005 (20) | 2006 (15) |
-| 2007 (32) | 2008 (57) | 2009 (58) | 2010 (168) |
-| 2011 (60) | 2012 (163) | 2013 (177) | 2014 (214) |
-| 2015 (211) | 2016 (205) | 2017 (375) | 2018 (576) |
-| 2019 (494) | 2020 (567) | 2021 (725) | 2022 (752) |
-| 2023 (691) | 2024 (649) | 2025 (397) | 2026 (0) |
+| 2003 (1) | 2004 (5) | 2005 (20) | 2006 (17) |
+| 2007 (35) | 2008 (75) | 2009 (78) | 2010 (190) |
+| 2011 (79) | 2012 (208) | 2013 (248) | 2014 (307) |
+| 2015 (268) | 2016 (240) | 2017 (444) | 2018 (694) |
+| 2019 (536) | 2020 (629) | 2021 (785) | 2022 (767) |
+| 2023 (719) | 2024 (721) | 2025 (404) | 2026 (0) |
 
 
 ### Disclaimer
