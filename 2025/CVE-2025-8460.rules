@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Centreon Infra Monitoring XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/api/notification_rules|3f|"; startswith; fast_pattern; content:"|3b|<script"; nocase; distance:0; sid:1003964; rev:1; reference:cve,CVE-2025-8460; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-8460;)
