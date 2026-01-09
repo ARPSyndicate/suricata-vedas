@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Apache OFBiz XML-RPC XXE Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/webtools/control/xmlrpc"; nocase; distance:0; content:"<!DOCTYPE"; fast_pattern; sid:1000674; rev:1; reference:cve,CVE-2011-3600; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2011-3600;)
