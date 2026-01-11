@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Atarim Sensitive Information Exposure"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wp-json/atarim/v1/db/vc"; nocase; sid:1004154; rev:1; reference:cve,CVE-2025-60188; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-60188;)

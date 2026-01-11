@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"WPCHURCH SQL Injection Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/wp-admin/admin-ajax.php"; content:"action=wpchurch_get_sermons"; content:"sermon_id=|31|' OR '1'='1"; sid:1004155; rev:1; reference:cve,CVE-2025-32303; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-32303;)
